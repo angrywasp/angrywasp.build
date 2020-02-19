@@ -4,6 +4,8 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <OutputPath>$(SolutionDir)Bin/$(Configuration)/$(TargetFramework)</OutputPath>
+    <GenerateFullPaths>true</GenerateFullPaths>
+    <TrimUnusedDependencies>true</TrimUnusedDependencies>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
