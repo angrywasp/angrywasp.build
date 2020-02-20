@@ -1,0 +1,18 @@
+<Project>
+  <Import Project="$(MSBuildThisFileDirectory)AngryWasp.Build.Common.targets"/>
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputType>Exe</OutputType>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>$(SolutionDir)Bin/$(Configuration)/$(TargetFramework)</OutputPath>
+    <GenerateFullPaths>true</GenerateFullPaths>
+    <TrimUnusedDependencies>true</TrimUnusedDependencies>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(Publish) == 'true'">
+    <PublishTrimmed>true</PublishTrimmed>
+    <RuntimeIdentifiers>linux-x64;win-x64;osx-x64</RuntimeIdentifiers>
+    <PublishSingleFile>true</PublishSingleFile>
+    <OutputPath>../../Bin/Publish</OutputPath>
+  </PropertyGroup>
+</Project>

@@ -1,12 +1,4 @@
 <Project>
-  <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <OutputPath>$(SolutionDir)Bin/$(Configuration)/$(TargetFramework)</OutputPath>
-    <GenerateFullPaths>true</GenerateFullPaths>
-    <TrimUnusedDependencies>true</TrimUnusedDependencies>
-  </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>portable</DebugType>
@@ -15,12 +7,6 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <Optimize>true</Optimize>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0'">
-    <DefineConstants>$(DefineConstants);NETSTANDARD2_0</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.1'">
-    <DefineConstants>$(DefineConstants);NETSTANDARD2_1</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="$(MSBuildThisFileDirectory)LICENSE.txt">
