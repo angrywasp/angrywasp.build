@@ -11,7 +11,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="$(Publish) == 'true'">
     <PublishTrimmed>true</PublishTrimmed>
-    <RuntimeIdentifiers>linux-x64;win-x64;osx-x64</RuntimeIdentifiers>
+    <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
     <PublishSingleFile>true</PublishSingleFile>
   </PropertyGroup>
 </Project>
