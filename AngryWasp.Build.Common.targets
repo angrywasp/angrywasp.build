@@ -1,17 +1,20 @@
 <Project>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>portable</DebugType>
-    <Optimize>false</Optimize>
-    <DefineConstants>$(DefineConstants);DEBUG</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <Optimize>true</Optimize>
-  </PropertyGroup>
-  <ItemGroup>
-    <Content Include="$(MSBuildThisFileDirectory)LICENSE.txt">
-      <Link>AngryWasp.LICENSE.txt</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>portable</DebugType>
+        <Optimize>false</Optimize>
+        <DefineConstants>$(DefineConstants);DEBUG</DefineConstants>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <Optimize>true</Optimize>
+    </PropertyGroup>
+    <ItemGroup>
+        <Content Include="$(MSBuildThisFileDirectory)LICENSE.txt">
+            <Link>AngryWasp.LICENSE.txt</Link>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net48" Version="*" />
+    </ItemGroup>
 </Project>

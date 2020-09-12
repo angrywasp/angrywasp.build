@@ -1,17 +1,17 @@
 <Project>
-  <Import Project="$(MSBuildThisFileDirectory)AngryWasp.Build.Common.targets"/>
-  <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <OutputType>Exe</OutputType>
-    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <OutputPath>$(SolutionDir)Bin/$(Configuration)/$(TargetFramework)</OutputPath>
-    <GenerateFullPaths>true</GenerateFullPaths>
-    <TrimUnusedDependencies>true</TrimUnusedDependencies>
-  </PropertyGroup>
-  <PropertyGroup Condition="$(Publish) == 'true'">
-    <PublishTrimmed>true</PublishTrimmed>
-    <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
-    <PublishSingleFile>true</PublishSingleFile>
-  </PropertyGroup>
+    <Import Project="$(MSBuildThisFileDirectory)AngryWasp.Build.Common.targets" />
+    <PropertyGroup>
+        <TargetFrameworks>netcoreapp3.1;net48</TargetFrameworks>
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <OutputType>Exe</OutputType>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <OutputPath>$(SolutionDir)Bin/$(Configuration)/$(TargetFramework)</OutputPath>
+        <GenerateFullPaths>true</GenerateFullPaths>
+        <TrimUnusedDependencies>true</TrimUnusedDependencies>
+    </PropertyGroup>
+    <PropertyGroup Condition="$(Publish) == 'true'">
+        <PublishTrimmed>true</PublishTrimmed>
+        <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
+        <PublishSingleFile>true</PublishSingleFile>
+    </PropertyGroup>
 </Project>
