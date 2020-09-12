@@ -1,0 +1,11 @@
+<Project>
+<PropertyGroup>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Title>$(PackageId)</Title>
+    <Version>$(PackageVersion)</Version>
+    <PackageLicenseFile>AngryWasp.LICENSE.txt</PackageLicenseFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)/LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)"/>
+  </ItemGroup>
+</Project>
