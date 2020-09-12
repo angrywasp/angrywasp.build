@@ -14,7 +14,7 @@
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
     </ItemGroup>
-    <ItemGroup>
+    <ItemGroup Condition=" '$(TargetFramework)' == 'net48'">
         <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net48" Version="*" />
     </ItemGroup>
 </Project>
